@@ -1,6 +1,15 @@
 @import-normalize;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap');
 
+:root {
+  --primary-color: #473889;
+  --secondary-color: #988fbb;
+  --active-btn: #574a97;
+  --desc: #c9c4ff;
+  --blob-color: #e5f7ff;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
+  margin: 0;
 }
