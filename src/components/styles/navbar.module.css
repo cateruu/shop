@@ -11,6 +11,13 @@
   color: var(--primary-color);
 }
 
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+}
+
 .input {
   height: 50px;
   width: 300px;
@@ -23,6 +30,8 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   color: var(--primary-color);
+  background: url(../../images/search.svg) no-repeat scroll 285px;
+  background-size: 1.1rem;
 }
 
 .input:focus {
@@ -34,4 +43,10 @@
   color: var(--primary-color);
   opacity: 1;
   font-weight: 600;
+}
+
+.cart {
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  cursor: pointer;
 }

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './styles/navbar.module.css';
+import { IconContext } from 'react-icons';
 import { BsBag } from 'react-icons/bs';
 
 const Navbar = () => {
@@ -20,7 +21,9 @@ const Navbar = () => {
           className={styles.input}
           value={searchInput}
         />
-        <BsBag className={styles.cart} />
+        <IconContext.Provider value={{ className: styles.cart }}>
+          <BsBag />
+        </IconContext.Provider>
       </div>
     </nav>
   );
