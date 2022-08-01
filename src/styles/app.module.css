@@ -8,4 +8,5 @@
   top: 15px;
   left: 15px;
   height: calc(100% - 30px);
+  z-index: -1;
 }
