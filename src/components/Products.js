@@ -10,6 +10,7 @@ import { IconContext } from 'react-icons';
 const settings = {
   className: 'center',
   centerMode: true,
+  centerPadding: '60px',
   infinite: true,
   speed: 500,
   slidesToShow: 3,
