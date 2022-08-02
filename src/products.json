@@ -1,70 +1,70 @@
 [
   {
     "id": 1,
-    "name": "apple",
+    "name": "Apple",
     "description": "apul 🍎",
     "image": "https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     "price": 0.99
   },
   {
     "id": 2,
-    "name": "orange",
+    "name": "Orange",
     "description": "very juicy orange 🥵",
-    "image": "https://images.unsplash.com/photo-1557800636-894a64c1696f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+    "image": "https://images.unsplash.com/photo-1587735243615-c03f25aaff15?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
     "price": 2.99
   },
   {
     "id": 3,
-    "name": "watermelon",
+    "name": "Watermelon",
     "description": "🌊🍈",
-    "image": "https://images.unsplash.com/photo-1618244976467-4471176fc9b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "image": "https://images.unsplash.com/photo-1581074817932-af423ba4566e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
     "price": 19.99
   },
   {
     "id": 4,
-    "name": "banana",
+    "name": "Banana",
     "description": "yellow",
     "image": "https://images.unsplash.com/photo-1587132137056-bfbf0166836e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
     "price": 4.99
   },
   {
     "id": 5,
-    "name": "kiwi",
+    "name": "Kiwi",
     "description": "bruh",
-    "image": "https://images.unsplash.com/photo-1609889132698-1625aefc7f6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80",
+    "image": "https://images.unsplash.com/photo-1573066778058-03dbee2c5a0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
     "price": 2.99
   },
   {
     "id": 6,
-    "name": "strawberry",
+    "name": "Strawberry",
     "description": "from bełcz mały",
-    "image": "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80",
+    "image": "https://images.unsplash.com/photo-1622921491193-345ffb510f6f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
     "price": 6.99
   },
   {
     "id": 7,
-    "name": "ananas",
+    "name": "Ananas",
     "description": "tropical plant 🍹",
     "image": "https://images.unsplash.com/photo-1546556928-174b0dbfee44?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
     "price": 29.99
   },
   {
     "id": 8,
-    "name": "raspberry",
+    "name": "Raspberry",
     "description": "yum 😋",
     "image": "https://images.unsplash.com/photo-1615484476889-2830f980a5e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
     "price": 5.99
   },
   {
     "id": 9,
-    "name": "melon",
+    "name": "Melon",
     "description": "better than 🍉",
     "image": "https://images.unsplash.com/photo-1615485290690-285a539321e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
     "price": 15.99
   },
   {
     "id": 10,
-    "name": "fig",
+    "name": "Fig",
     "description": "what is this",
     "image": "https://images.unsplash.com/photo-1601379760591-1d89ae6ee1b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
     "price": 8.99
