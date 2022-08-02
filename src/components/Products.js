@@ -1,20 +1,12 @@
 import styles from './styles/products.module.css';
-import { BsFilter } from 'react-icons/bs';
-import { IconContext } from 'react-icons';
+import products from '../products.json';
 
 const Products = () => {
-  return (
-    <main>
-      <header className={styles.header}>
-        <h1 className={styles.title}>Products</h1>
-        <div className={styles.filter}>
-          <IconContext.Provider value={{ className: styles.filterIcon }}>
-            <BsFilter />
-          </IconContext.Provider>
-        </div>
-      </header>
-    </main>
-  );
+  const productElements = products.map((product) => {
+    return <div key={product.id}>{product.name}</div>;
+  });
+
+  return <section className={styles.container}>{productElements}</section>;
 };
 
 export default Products;

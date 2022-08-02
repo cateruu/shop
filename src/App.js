@@ -1,6 +1,6 @@
 import styles from './styles/app.module.css';
 import Navbar from './components/Navbar';
-import Products from './components/Products';
+import Container from './components/Container';
 import { ReactComponent as Blob } from './images/blob.svg';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div className={styles.container}>
       <Blob className={styles.blob} />
       <Navbar />
-      <Products />
+      <Container />
     </div>
   );
 }
