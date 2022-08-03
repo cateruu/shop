@@ -17,3 +17,21 @@
   font-size: 1.6rem;
   cursor: pointer;
 }
+
+.container {
+  position: relative;
+}
+
+.cartAmount {
+  width: 20px;
+  height: 20px;
+  background-color: var(--secondary-color);
+  color: var(--border-color);
+  font-size: 0.7rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+}

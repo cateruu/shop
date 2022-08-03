@@ -16,6 +16,7 @@ const cartSlice = createSlice({
       }
 
       state.cartItems.push({ id: payload.id, amount: 1 });
+      state.amount++;
     },
     clearCart: (state) => {
       state.cartItems = [];
