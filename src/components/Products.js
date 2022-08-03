@@ -2,15 +2,13 @@ import styles from './styles/products.module.css';
 import products from '../products.json';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import './styles/slider.css';
 import { IoAdd } from 'react-icons/io5';
 import { IconContext } from 'react-icons';
 
 const settings = {
-  className: 'center',
+  className: 'slider',
   centerMode: true,
-  centerPadding: '60px',
   infinite: true,
   speed: 500,
   slidesToShow: 3,

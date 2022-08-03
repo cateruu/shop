@@ -1,1 +1,14 @@
+.slick-list {
+  overflow: visible;
+}
 
+.slick-slide {
+  transform: scale(0.9);
+  transition: 0.2s;
+}
+
+.slick-current {
+  transform: scale(1);
+  transition: 0.2s;
+  transition-delay: 0s;
+}
