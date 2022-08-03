@@ -11,3 +11,30 @@
 .slick-current {
   transform: scale(1);
 }
+
+.slick-current div div div {
+  background-color: var(--current-color);
+  color: #fff;
+}
+
+.slick-current div div div div {
+  background-color: var(--active-btn);
+}
+
+.slick-current div div div p:first-of-type {
+  color: var(--current-text);
+}
+
+.slick-arrow {
+  background-color: #fff;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}

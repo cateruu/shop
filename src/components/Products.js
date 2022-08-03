@@ -4,7 +4,28 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import './styles/slider.css';
 import { IoAdd } from 'react-icons/io5';
+import { GrFormPrevious, GrFormNext } from 'react-icons/gr';
 import { IconContext } from 'react-icons';
+
+const PrevArrow = ({ className, style, onClick }) => {
+  return (
+    <div className={className} onClick={onClick}>
+      <IconContext.Provider value={{ className: styles.arrow }}>
+        <GrFormPrevious />
+      </IconContext.Provider>
+    </div>
+  );
+};
+
+const NextArrow = ({ className, style, onClick }) => {
+  return (
+    <div className={className} onClick={onClick}>
+      <IconContext.Provider value={{ className: styles.arrow }}>
+        <GrFormNext />
+      </IconContext.Provider>
+    </div>
+  );
+};
 
 const settings = {
   className: 'slider',
@@ -13,6 +34,8 @@ const settings = {
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 1,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
 };
 
 const Products = () => {

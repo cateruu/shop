@@ -4,6 +4,8 @@
 :root {
   --primary-color: #473889;
   --secondary-color: #988fbb;
+  --current-color: #776fc3;
+  --current-text: #c9c4ff;
   --active-btn: #574a97;
   --border-color: #e7ddf2;
   --desc-color: #988fbb;
