@@ -4,15 +4,13 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import './styles/slider.css';
 import { IoAdd } from 'react-icons/io5';
-import { GrFormPrevious, GrFormNext } from 'react-icons/gr';
+import { MdNavigateNext, MdNavigateBefore } from 'react-icons/md';
 import { IconContext } from 'react-icons';
 
 const PrevArrow = ({ className, style, onClick }) => {
   return (
     <div className={className} onClick={onClick}>
-      <IconContext.Provider value={{ className: styles.arrow }}>
-        <GrFormPrevious />
-      </IconContext.Provider>
+      <MdNavigateBefore />
     </div>
   );
 };
@@ -20,9 +18,7 @@ const PrevArrow = ({ className, style, onClick }) => {
 const NextArrow = ({ className, style, onClick }) => {
   return (
     <div className={className} onClick={onClick}>
-      <IconContext.Provider value={{ className: styles.arrow }}>
-        <GrFormNext />
-      </IconContext.Provider>
+      <MdNavigateNext />
     </div>
   );
 };

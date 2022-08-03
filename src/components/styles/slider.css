@@ -26,15 +26,39 @@
 }
 
 .slick-arrow {
-  background-color: #fff;
+  background-color: transparent;
   display: block;
   width: 50px;
   height: 50px;
-  border: 1px solid var(--border-color);
   border-radius: 50%;
+  border: 1px solid transparent;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  position: absolute;
+  top: -85px;
+  transition: 0.2s;
+}
+
+.slick-arrow svg {
+  color: var(--desc-color);
+}
+
+.slick-arrow:hover {
+  background-color: #fff;
+  border-color: var(--border-color);
+}
+
+.slick-arrow:hover svg {
+  color: var(--active-btn);
+}
+
+.slick-prev {
+  right: 300px;
+}
+
+.slick-next {
+  right: 245px;
 }
