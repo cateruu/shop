@@ -2,7 +2,7 @@ import styles from './styles/container.module.css';
 import Header from './Header';
 import Products from './Products';
 
-const Container = () => {
+const Main = () => {
   return (
     <main className={styles.main}>
       <Header />
@@ -11,4 +11,4 @@ const Container = () => {
   );
 };
 
-export default Container;
+export default Main;
