@@ -5,10 +5,9 @@
 .slick-slide {
   transform: scale(0.9);
   transition: 0.2s;
+  transition-delay: 0.05s;
 }
 
 .slick-current {
   transform: scale(1);
-  transition: 0.2s;
-  transition-delay: 0s;
 }

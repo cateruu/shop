@@ -64,9 +64,9 @@
   },
   {
     "id": 10,
-    "name": "Fig",
-    "description": "what is this",
-    "image": "https://images.unsplash.com/photo-1601379760591-1d89ae6ee1b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    "name": "Mango",
+    "description": "yoooo",
+    "image": "https://images.unsplash.com/photo-1587486936739-78df7470c7e0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=881&q=80",
     "price": 8.99
   }
 ]

@@ -13,15 +13,21 @@
 
 .image {
   height: 60%;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .description {
   width: 95%;
-  height: 30%;
+  height: 35%;
   background-color: var(--border-color);
   border-radius: 20px;
   position: relative;
   color: var(--primary-color);
+  margin: 0 auto;
+  padding-top: 10px;
 }
 
 .name {
@@ -39,7 +45,7 @@
 
 .price {
   position: absolute;
-  bottom: 20px;
+  bottom: 15px;
   left: 20px;
 }
 
