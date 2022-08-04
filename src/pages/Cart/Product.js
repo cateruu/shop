@@ -1,8 +1,13 @@
 import styles from './styles/product.module.css';
 import { AiFillCaretUp, AiFillCaretDown } from 'react-icons/ai';
+import { MdOutlineDelete } from 'react-icons/md';
 import { IconContext } from 'react-icons';
+import { useDispatch } from 'react-redux';
+import { removeItem } from '../../features/cart/cartSlice';
 
-const Product = ({ image, name, price, amount }) => {
+const Product = ({ id, image, name, price, amount }) => {
+  const dispatch = useDispatch();
+
   return (
     <div className={styles.product}>
       <div className={styles.imageContainer}>
@@ -11,6 +16,9 @@ const Product = ({ image, name, price, amount }) => {
           <h4 className={styles.name}>{name}</h4>
           <p className={styles.price}>${price}</p>
         </div>
+        <IconContext.Provider value={{ className: styles.remove }}>
+          <MdOutlineDelete onClick={() => dispatch(removeItem({ id: id }))} />
+        </IconContext.Provider>
       </div>
       <div className={styles.amountContainer}>
         <IconContext.Provider value={{ className: styles.arrows }}>

@@ -6,6 +6,7 @@
 
 .imageContainer {
   display: flex;
+  position: relative;
 }
 
 .image {
@@ -21,6 +22,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  margin-right: 10px;
 }
 
 .name {
@@ -31,6 +33,18 @@
 .price {
   margin-bottom: 10px;
   color: var(--secondary-color);
+}
+
+.remove {
+  align-self: flex-end;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.remove:hover {
+  color: var(--error-color);
 }
 
 .amountContainer {
