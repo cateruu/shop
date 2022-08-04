@@ -2,7 +2,7 @@ import styles from './styles/product.module.css';
 import { IoAdd } from 'react-icons/io5';
 import { IconContext } from 'react-icons';
 import { useDispatch } from 'react-redux';
-import { addItem } from '../features/cart/cartSlice';
+import { addItem } from '../../features/cart/cartSlice';
 
 const Product = ({ id, image, name, description, price }) => {
   const dispatch = useDispatch();

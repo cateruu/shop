@@ -1,4 +1,4 @@
-import products from '../products.json';
+import products from '../../products.json';
 import Slider from 'react-slick';
 import Product from './Product';
 import 'slick-carousel/slick/slick.css';
