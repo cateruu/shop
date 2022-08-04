@@ -20,7 +20,12 @@ const cartSlice = createSlice({
         return;
       }
 
-      state.cartItems.push({ id: payload.id, amount: 1 });
+      state.cartItems.push({
+        id: payload.id,
+        name: payload.name,
+        image: payload.image,
+        amount: 1,
+      });
       state.amount++;
     },
     clearCart: (state) => {
