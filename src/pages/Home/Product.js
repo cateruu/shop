@@ -17,7 +17,9 @@ const Product = ({ id, image, name, description, price }) => {
         <div
           className={styles.add}
           onClick={() =>
-            dispatch(addItem({ id: id, name: name, image: image }))
+            dispatch(
+              addItem({ id: id, name: name, image: image, price: price })
+            )
           }
         >
           <IconContext.Provider value={{ className: styles.addIcon }}>
