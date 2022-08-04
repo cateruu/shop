@@ -1,7 +1,10 @@
+.container {
+  margin: 20px 0;
+}
+
 .total {
   display: flex;
   align-items: center;
-  margin-top: 20px;
 }
 
 .header {
@@ -32,6 +35,7 @@
 
 .buy {
   margin-right: 10px;
+  color: var(--active-btn);
 }
 
 .buy:hover {
