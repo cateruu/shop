@@ -1,20 +1,23 @@
 import styles from './styles/product.module.css';
 import { AiFillCaretUp, AiFillCaretDown } from 'react-icons/ai';
+import { IconContext } from 'react-icons';
 
 const Product = ({ image, name, price, amount }) => {
   return (
     <div className={styles.product}>
-      <div>
-        <img src={image} alt={name} />
-        <div className={styles.container}>
+      <div className={styles.imageContainer}>
+        <img src={image} alt={name} className={styles.image} />
+        <div className={styles.nameContainer}>
           <h4 className={styles.name}>{name}</h4>
-          <p className={styles.amount}>${price}</p>
+          <p className={styles.price}>${price}</p>
         </div>
-        <div>
+      </div>
+      <div className={styles.amountContainer}>
+        <IconContext.Provider value={{ className: styles.arrows }}>
           <AiFillCaretUp />
-          {amount}
+          <p className={styles.amount}>{amount}</p>
           <AiFillCaretDown />
-        </div>
+        </IconContext.Provider>
       </div>
     </div>
   );
