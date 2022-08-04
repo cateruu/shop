@@ -1,0 +1,16 @@
+.total {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.header {
+  color: var(--primary-color);
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.price {
+  color: var(--active-btn);
+  font-size: 1.5rem;
+}

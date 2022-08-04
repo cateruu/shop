@@ -1,20 +1,23 @@
+import { useEffect } from 'react';
 import styles from './styles/cart.module.css';
-import { IoReturnUpBack } from 'react-icons/io5';
-import { IconContext } from 'react-icons';
-import { Link } from 'react-router-dom';
+import Header from './Header';
 import Products from './Products';
+import Total from './Total';
+import { useDispatch } from 'react-redux';
+import { calculateTotalCost } from '../../features/cart/cartSlice';
 
 const Cart = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(calculateTotalCost());
+  }, []);
+
   return (
     <main className={styles.main}>
-      <Link to='/' className={styles.container}>
-        <IconContext.Provider value={{ className: styles.backIcon }}>
-          <IoReturnUpBack />
-        </IconContext.Provider>
-        <span className={styles.backText}>a yoooo get me outta here</span>
-      </Link>
-      <h1 className={styles.header}>Cart</h1>
+      <Header />
       <Products />
+      <Total />
     </main>
   );
 };
