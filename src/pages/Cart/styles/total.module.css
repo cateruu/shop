@@ -14,3 +14,30 @@
   color: var(--active-btn);
   font-size: 1.5rem;
 }
+
+.btn {
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  width: 120px;
+  padding: 10px;
+  text-align: center;
+  background-color: var(--border-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: -10px;
+  font-size: 1.2rem;
+}
+
+.buy {
+  margin-right: 10px;
+}
+
+.buy:hover {
+  color: var(--confirm-color);
+}
+
+.clear:hover {
+  color: var(--error-color);
+}
