@@ -3,7 +3,7 @@ import { AiFillCaretUp, AiFillCaretDown } from 'react-icons/ai';
 import { MdOutlineDelete } from 'react-icons/md';
 import { IconContext } from 'react-icons';
 import { useDispatch } from 'react-redux';
-import { removeItem } from '../../features/cart/cartSlice';
+import { removeItem, changeItemAmount } from '../../features/cart/cartSlice';
 
 const Product = ({ id, image, name, price, amount }) => {
   const dispatch = useDispatch();
@@ -22,9 +22,22 @@ const Product = ({ id, image, name, price, amount }) => {
       </div>
       <div className={styles.amountContainer}>
         <IconContext.Provider value={{ className: styles.arrows }}>
-          <AiFillCaretUp />
+          <AiFillCaretUp
+            onClick={() =>
+              dispatch(changeItemAmount({ id: id, action: 'increase' }))
+            }
+          />
           <p className={styles.amount}>{amount}</p>
-          <AiFillCaretDown />
+          <AiFillCaretDown
+            onClick={() => {
+              if (amount === 1) {
+                dispatch(removeItem({ id: id }));
+                return;
+              }
+
+              dispatch(changeItemAmount({ id: id, action: 'decrease' }));
+            }}
+          />
         </IconContext.Provider>
       </div>
     </div>

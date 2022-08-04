@@ -42,14 +42,35 @@ const cartSlice = createSlice({
 
       state.cartItems.forEach((item) => {
         amount += item.amount;
-        total += item.price * amount;
+        total += item.price * item.amount;
       });
 
+      state.amount = amount;
       state.total = total;
+    },
+    changeItemAmount: (state, { payload }) => {
+      const item = state.cartItems.find((item) => item.id === payload.id);
+
+      switch (payload.action) {
+        case 'increase':
+          item.amount++;
+          break;
+        case 'decrease':
+          item.amount--;
+          break;
+        default:
+          console.error('Unknown action in Change Item Amount');
+          break;
+      }
     },
   },
 });
 
-export const { addItem, clearCart, removeItem, calculateTotalCost } =
-  cartSlice.actions;
+export const {
+  addItem,
+  clearCart,
+  removeItem,
+  calculateTotalCost,
+  changeItemAmount,
+} = cartSlice.actions;
 export default cartSlice.reducer;
