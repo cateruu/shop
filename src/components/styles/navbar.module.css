@@ -10,6 +10,7 @@
 .name {
   font-size: 1.7rem;
   color: var(--primary-color);
+  cursor: pointer;
 }
 
 .cart {
@@ -37,5 +38,5 @@
 }
 
 a {
-  text-decoration: none;
+  all: unset;
 }

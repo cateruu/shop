@@ -1,0 +1,23 @@
+.main {
+  margin: 0 auto;
+  position: relative;
+  width: 55%;
+}
+
+.container {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: var(--secondary-color);
+}
+
+.backIcon {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.header {
+  color: var(--primary-color);
+  font-size: 3rem;
+  margin-top: 0;
+}

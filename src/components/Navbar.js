@@ -17,8 +17,11 @@ const Navbar = () => {
           <IconContext.Provider value={{ className: styles.cart }}>
             <BsBag />
           </IconContext.Provider>
+
+          {amount > 0 ? (
+            <div className={styles.cartAmount}>{amount}</div>
+          ) : null}
         </Link>
-        {amount > 0 ? <div className={styles.cartAmount}>{amount}</div> : null}
       </div>
     </nav>
   );

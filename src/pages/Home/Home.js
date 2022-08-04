@@ -1,7 +1,14 @@
-import Main from './Main';
+import styles from './styles/home.module.css';
+import Header from './Header';
+import Products from './Products';
 
 const Home = () => {
-  return <Main />;
+  return (
+    <main className={styles.main}>
+      <Header />
+      <Products />
+    </main>
+  );
 };
 
 export default Home;
