@@ -1,0 +1,11 @@
+.buy {
+  position: fixed;
+  right: 0;
+  bottom: 100px;
+  padding: 10px 20px;
+  width: fit-content;
+  background-color: var(--confirm-color);
+  border-radius: 20px 0 0 20px;
+  text-align: center;
+  color: #fff;
+}
