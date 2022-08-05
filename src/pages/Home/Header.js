@@ -4,7 +4,7 @@ import { BsFilter } from 'react-icons/bs';
 import { IconContext } from 'react-icons';
 import { useSelector, useDispatch } from 'react-redux';
 import { AnimatePresence } from 'framer-motion';
-import { openFilter } from '../../features/filter/filterSlice';
+import { openFilter, closeFilter } from '../../features/filter/filterSlice';
 
 const Header = () => {
   const { isOpen } = useSelector((state) => state.filter);
@@ -13,12 +13,22 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <h1 className={styles.title}>Products</h1>
-      <div className={styles.filter} onClick={() => disptatch(openFilter())}>
+      <div
+        className={styles.filter}
+        onClick={() => {
+          if (isOpen) {
+            disptatch(closeFilter());
+            return;
+          }
+
+          disptatch(openFilter());
+        }}
+      >
         <IconContext.Provider value={{ className: styles.filterIcon }}>
           <BsFilter />
         </IconContext.Provider>
       </div>
-      <AnimatePresence>{isOpen && <Filter />}</AnimatePresence>
+      {isOpen && <Filter />}
     </header>
   );
 };
