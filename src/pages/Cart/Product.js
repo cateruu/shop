@@ -4,12 +4,19 @@ import { MdOutlineDelete } from 'react-icons/md';
 import { IconContext } from 'react-icons';
 import { useDispatch } from 'react-redux';
 import { removeItem, changeItemAmount } from '../../features/cart/cartSlice';
+import { motion } from 'framer-motion';
 
-const Product = ({ id, image, name, price, amount }) => {
+const Product = ({ id, image, name, price, amount, variants }) => {
   const dispatch = useDispatch();
 
   return (
-    <div className={styles.product}>
+    <motion.div
+      key={id}
+      variants={variants}
+      exit={{ x: -100, opacity: 0, scale: 0.8 }}
+      transition={{ type: 'spring', duration: 0.5 }}
+      className={styles.product}
+    >
       <div className={styles.imageContainer}>
         <img src={image} alt={name} className={styles.image} />
         <div className={styles.nameContainer}>
@@ -40,7 +47,7 @@ const Product = ({ id, image, name, price, amount }) => {
           />
         </IconContext.Provider>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
