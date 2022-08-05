@@ -13,7 +13,7 @@ const Product = ({ id, image, name, price, amount, variants }) => {
     <motion.div
       key={id}
       variants={variants}
-      exit={{ x: -100, opacity: 0, scale: 0.8 }}
+      exit={{ x: -100, scale: 0 }}
       transition={{ type: 'spring', duration: 0.5 }}
       className={styles.product}
     >
