@@ -3,3 +3,9 @@
   position: relative;
   width: 55%;
 }
+
+@media screen and (max-width: 500px) {
+  .main {
+    width: 80%;
+  }
+}

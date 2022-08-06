@@ -15,3 +15,18 @@
   font-size: 3rem;
   margin-top: 0;
 }
+
+@media screen and (max-width: 500px) {
+  .header {
+    font-size: 2rem;
+  }
+
+  .container {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+  }
+
+  .backIcon {
+    font-size: 1.2rem;
+  }
+}
