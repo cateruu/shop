@@ -1,7 +1,8 @@
 import styles from './styles/filter.module.css';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { closeFilter, sortProducts } from '../features/filter/filterSlice';
 
 const container = {
   closed: { scale: 0, x: -80, transition: { delay: 0.3 } },
@@ -23,6 +24,7 @@ const option = {
 
 const Filter = () => {
   const { isOpen } = useSelector((state) => state.filter);
+  const disptatch = useDispatch();
 
   return (
     <motion.ul
@@ -35,18 +37,42 @@ const Filter = () => {
       <motion.li
         className={styles.option}
         variants={option}
-        exit={{ sclae: 0 }}
+        onClick={() => {
+          disptatch(sortProducts({ type: 'name', action: 'ascending' }));
+          disptatch(closeFilter());
+        }}
       >
         <span className={styles.text}>Name</span>
         <BsChevronDown className={styles.icon} />
       </motion.li>
-      <motion.li className={styles.option} variants={option}>
+      <motion.li
+        className={styles.option}
+        variants={option}
+        onClick={() => {
+          disptatch(sortProducts({ type: 'name', action: 'descending' }));
+          disptatch(closeFilter());
+        }}
+      >
         Name <BsChevronUp className={styles.icon} />
       </motion.li>
-      <motion.li className={styles.option} variants={option}>
+      <motion.li
+        className={styles.option}
+        variants={option}
+        onClick={() => {
+          disptatch(sortProducts({ type: 'price', action: 'ascending' }));
+          disptatch(closeFilter());
+        }}
+      >
         Price <BsChevronDown className={styles.icon} />
       </motion.li>
-      <motion.li className={styles.option} variants={option}>
+      <motion.li
+        className={styles.option}
+        variants={option}
+        onClick={() => {
+          disptatch(sortProducts({ type: 'price', action: 'descending' }));
+          disptatch(closeFilter());
+        }}
+      >
         Price <BsChevronUp className={styles.icon} />
       </motion.li>
     </motion.ul>

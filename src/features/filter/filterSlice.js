@@ -16,8 +16,37 @@ const filterSlice = createSlice({
     closeFilter: (state) => {
       state.isOpen = false;
     },
+    sortProducts: (state, { payload }) => {
+      switch (payload.type) {
+        case 'name':
+          if (payload.action === 'ascending') {
+            state.products.sort((a, b) =>
+              a.name > b.name ? 1 : a.name < b.name ? -1 : 0
+            );
+          } else if (payload.action === 'descending') {
+            state.products.sort((a, b) =>
+              a.name < b.name ? 1 : a.name > b.name ? -1 : 0
+            );
+          }
+          break;
+        case 'price':
+          if (payload.action === 'ascending') {
+            state.products.sort((a, b) =>
+              a.price > b.price ? 1 : a.price < b.price ? -1 : 0
+            );
+          } else if (payload.action === 'descending') {
+            state.products.sort((a, b) =>
+              a.price < b.price ? 1 : a.price > b.price ? -1 : 0
+            );
+          }
+          break;
+        default:
+          console.error('Unexpected parameter!');
+          break;
+      }
+    },
   },
 });
 
-export const { openFilter, closeFilter } = filterSlice.actions;
+export const { openFilter, closeFilter, sortProducts } = filterSlice.actions;
 export default filterSlice.reducer;
