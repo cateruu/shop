@@ -30,6 +30,14 @@ const settings = {
   slidesToScroll: 1,
   nextArrow: <NextArrow />,
   prevArrow: <PrevArrow />,
+  responsive: [
+    {
+      breakpoint: 1100,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
 };
 
 const Products = () => {

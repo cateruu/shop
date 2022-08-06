@@ -40,3 +40,9 @@
 a {
   all: unset;
 }
+
+@media screen and (max-width: 1100px) {
+  .nav {
+    height: 80px;
+  }
+}

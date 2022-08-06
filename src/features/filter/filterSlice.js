@@ -41,7 +41,7 @@ const filterSlice = createSlice({
           }
           break;
         default:
-          console.error('Unexpected parameter!');
+          console.error('Unexpected parameter in filter sort function!');
           break;
       }
     },
