@@ -3,3 +3,9 @@
   text-align: center;
   color: var(--secondary-color);
 }
+
+@media screen and (max-width: 800px) {
+  .empty {
+    font-size: 2rem;
+  }
+}
