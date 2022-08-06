@@ -1,6 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
+import products from '../../products.json';
 
 const initialState = {
+  products: [...products],
   isOpen: false,
 };
 

@@ -1,9 +1,9 @@
-import products from '../../products.json';
 import Slider from 'react-slick';
 import Product from './Product';
 import 'slick-carousel/slick/slick.css';
 import './styles/slider.css';
 import { MdNavigateNext, MdNavigateBefore } from 'react-icons/md';
+import { useSelector } from 'react-redux';
 
 const PrevArrow = ({ className, style, onClick }) => {
   return (
@@ -33,6 +33,8 @@ const settings = {
 };
 
 const Products = () => {
+  const { products } = useSelector((state) => state.filter);
+
   const productElements = products.map((product) => {
     return (
       <Product
