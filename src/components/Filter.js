@@ -10,7 +10,7 @@ const container = {
     x: 0,
     transition: {
       duration: 0.3,
-      staggerChildren: 0.03,
+      staggerChildren: 0.01,
       delayChildren: 0.1,
     },
   },
@@ -25,32 +25,31 @@ const Filter = () => {
   const { isOpen } = useSelector((state) => state.filter);
 
   return (
-    <AnimatePresence>
-      <motion.ul
-        className={styles.filter}
-        variants={container}
-        initial='closed'
-        animate={isOpen ? 'open' : 'closed'}
+    <motion.ul
+      className={styles.filter}
+      variants={container}
+      initial='closed'
+      animate={isOpen ? 'open' : 'closed'}
+      exit={{ scale: 0, x: -50 }}
+    >
+      <motion.li
+        className={styles.option}
+        variants={option}
+        exit={{ sclae: 0 }}
       >
-        <motion.li
-          className={styles.option}
-          variants={option}
-          exit={{ sclae: 0 }}
-        >
-          <span className={styles.text}>Name</span>
-          <BsChevronDown className={styles.icon} />
-        </motion.li>
-        <motion.li className={styles.option} variants={option}>
-          Name <BsChevronUp className={styles.icon} />
-        </motion.li>
-        <motion.li className={styles.option} variants={option}>
-          Price <BsChevronDown className={styles.icon} />
-        </motion.li>
-        <motion.li className={styles.option} variants={option}>
-          Price <BsChevronUp className={styles.icon} />
-        </motion.li>
-      </motion.ul>
-    </AnimatePresence>
+        <span className={styles.text}>Name</span>
+        <BsChevronDown className={styles.icon} />
+      </motion.li>
+      <motion.li className={styles.option} variants={option}>
+        Name <BsChevronUp className={styles.icon} />
+      </motion.li>
+      <motion.li className={styles.option} variants={option}>
+        Price <BsChevronDown className={styles.icon} />
+      </motion.li>
+      <motion.li className={styles.option} variants={option}>
+        Price <BsChevronUp className={styles.icon} />
+      </motion.li>
+    </motion.ul>
   );
 };
 

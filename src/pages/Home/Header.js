@@ -13,22 +13,24 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <h1 className={styles.title}>Products</h1>
-      <div
-        className={styles.filter}
-        onClick={() => {
-          if (isOpen) {
-            disptatch(closeFilter());
-            return;
-          }
+      <div className={styles.container}>
+        <div
+          className={styles.filter}
+          onClick={() => {
+            if (isOpen) {
+              disptatch(closeFilter());
+              return;
+            }
 
-          disptatch(openFilter());
-        }}
-      >
-        <IconContext.Provider value={{ className: styles.filterIcon }}>
-          <BsFilter />
-        </IconContext.Provider>
+            disptatch(openFilter());
+          }}
+        >
+          <IconContext.Provider value={{ className: styles.filterIcon }}>
+            <BsFilter />
+          </IconContext.Provider>
+        </div>
+        <AnimatePresence>{isOpen && <Filter />}</AnimatePresence>
       </div>
-      {isOpen && <Filter />}
     </header>
   );
 };
